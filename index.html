@@ -754,7 +754,7 @@
     btn.textContent = 'Sending…';
     btn.disabled = true;
     const data = new FormData(form);
-    fetch('/', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() })
+    fetch('https://api.web3forms.com/submit', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() })
       .then(() => {
         btn.textContent = '✓ Message Sent!';
         btn.style.background = '#16a34a';
