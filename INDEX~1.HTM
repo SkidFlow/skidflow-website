@@ -683,33 +683,34 @@
       </div>
     </div>
     <div class="contact-form">
-      <form onsubmit="handleForm(event)">
+      <form action="https://api.web3forms.com/submit" method="POST" onsubmit="handleForm(event)">
         <input type="hidden" name="access_key" value="8aedce26-76e0-4190-8acf-5d91a1d2d712"/>
         <input type="hidden" name="subject" value="Nova mensagem - Skid Flow Logistics"/>
         <input type="hidden" name="from_name" value="Skid Flow Website"/>
+        <input type="hidden" name="redirect" value="https://www.skidflow.ca/#contact-wrap"/>
         <div class="form-row">
           <div class="fg">
             <label>Full Name <span>*</span></label>
-            <input type="text" placeholder="John Doe" required/>
+            <input type="text" name="name" placeholder="John Doe" required/>
           </div>
           <div class="fg">
             <label>Company</label>
-            <input type="text" placeholder="Acme Logistics"/>
+            <input type="text" name="company" placeholder="Acme Logistics"/>
           </div>
         </div>
         <div class="form-row">
           <div class="fg">
             <label>Email <span>*</span></label>
-            <input type="email" placeholder="john@company.com" required/>
+            <input type="email" name="email" placeholder="john@company.com" required/>
           </div>
           <div class="fg">
             <label>Phone</label>
-            <input type="tel" placeholder="+1 (604) 000-0000"/>
+            <input type="tel" name="phone" placeholder="+1 (604) 000-0000"/>
           </div>
         </div>
         <div class="fg">
           <label>Service</label>
-          <select>
+          <select name="service">
             <option value="">Select a service…</option>
             <option>Container Unloading & Loading</option>
             <option>Strategic Warehouse Management</option>
@@ -718,7 +719,7 @@
         </div>
         <div class="fg">
           <label>Message <span>*</span></label>
-          <textarea placeholder="Tell us about your operation…" required></textarea>
+          <textarea name="message" placeholder="Tell us about your operation…" required></textarea>
         </div>
         <button type="submit" class="btn-send">Send Message →</button>
       </form>
