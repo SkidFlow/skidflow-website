@@ -756,7 +756,7 @@
     const data = new FormData(form);
     fetch('https://api.web3forms.com/submit', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() })
       .then(() => {
-        btn.textContent = 'form.style.display = 'none';';
+        form.style.display = 'none';
         document.getElementById('form-success').style.display = 'block';
         form.reset();
         btn.disabled = false;
